@@ -19,16 +19,28 @@ namespace Lektion12
             //product.Purchase(31);
 
             // Listan som håller talen
-            List<int> lista = new List<int> { 1, 2, 3, 4, 5, 6, 7, };
-            double average;
-            int sum;
-            //Anropar metod
-            CalculateSumAndAverage(lista, out average, out sum);
+            //List<int> lista = new List<int> { 1, 2, 3, 4, 5, 6, 7, };
+            //double average;
+            //int sum;
+            ////Anropar metod
+            //CalculateSumAndAverage(lista, out average, out sum);
 
-            // Skriv ut resultatet
-            Console.WriteLine($"Summan av talen är: {sum}");
-            Console.WriteLine($"Medelvärdet av talen är: {average}");
+            //// Skriv ut resultatet
+            //Console.WriteLine($"Summan av talen är: {sum}");
+            //Console.WriteLine($"Medelvärdet av talen är: {average}");
+
+            FlightBooking booking = new FlightBooking();
+
+            booking.PassengerName = "Emilia D";
+            booking.SeatNumber = 27;
+            booking.FlightNumber = 12;
+
+            booking.DisplayBookingDetails();
+
+            booking.ProcessPayment("1209-9,2542,541852,5");
         }
+
+
         public static void CalculateSumAndAverage(List <int> list, out double average, out int sum)
         {
             sum = 0;
