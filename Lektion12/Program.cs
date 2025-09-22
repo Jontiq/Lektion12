@@ -9,6 +9,11 @@
             //user.ChangePassword("password123", "123password");
             //user.Login("Jontiq", "123password");
 
+            Product product = new Product("Milk", 15.95m, 25);
+            product.DisplayProduct();
+            product.Restock(50);
+            product.Purchase(20);
+            product.Purchase(31);
         }
     }
 }
