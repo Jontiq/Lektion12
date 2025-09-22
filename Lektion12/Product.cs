@@ -32,7 +32,7 @@ namespace Lektion12
         }
         private void UpdateStockQuantity(int quantity)
         {
-            StockQuantity = quantity;
+            StockQuantity += quantity;
             Console.WriteLine($"Stock for {ProductName} has been updated, new stock: {StockQuantity}");
         }
 
@@ -48,16 +48,18 @@ namespace Lektion12
             }
         }
 
-        public void Purchase(int quantity)
+        public bool Purchase(int quantity)
         {
             if (StockQuantity >= quantity)
             {
                 StockQuantity -= quantity;
                 Console.WriteLine($"Purchase successful, {quantity} of {ProductName} has been added to your inventory");
+                return true;
             }
             else
             {
                 Console.WriteLine($"Sorry, we don't have enough {ProductName} in stock to complete this purchase.");
+                return false;
             }
         }
     }
